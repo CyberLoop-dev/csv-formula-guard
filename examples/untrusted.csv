@@ -1,0 +1,1 @@
+name,note\nAlice,hello\nBob,=HYPERLINK(\"https://example.test\",\"click\")\nCharlie,  +SUM(A1:A3)\n
