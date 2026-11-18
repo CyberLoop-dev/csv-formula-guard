@@ -8,7 +8,7 @@ import sys
 FORMULA_PREFIXES = ("=", "+", "-", "@")
 
 def is_formula_like(value):
-    candidate = value.lstrip(" \\t\\r\\n")
+    candidate = value.lstrip(" \t\r\n")
     if not candidate:
         return False
     if candidate[0] in ("+", "-"):
