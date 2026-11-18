@@ -48,7 +48,12 @@ Run `python main.py --help` to see all supported options.
 ## :file_folder: Folder Structure
 
 ```text
-csv-formula-guard/\n├── main.py\n├── requirements.txt\n├── tests/test_core.py\n├── examples/untrusted.csv\n└── assets/illustration.svg
+csv-formula-guard/
+├── main.py
+├── requirements.txt
+├── tests/test_core.py
+├── examples/untrusted.csv
+└── assets/illustration.svg
 ```
 
 ## :world_map: Roadmap

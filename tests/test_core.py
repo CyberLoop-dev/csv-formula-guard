@@ -5,11 +5,14 @@ class FormulaGuardTests(unittest.TestCase):
     def test_detects_formula_prefixes(self):
         self.assertTrue(is_formula_like("  =SUM(A1:A2)"))
         self.assertTrue(is_formula_like("@cmd"))
-    def test_ignores_plain_text(self):
+        self.assertTrue(is_formula_like("-1+2"))
+    def test_ignores_plain_text_and_negative_numbers(self):
         self.assertFalse(is_formula_like("hello"))
         self.assertFalse(is_formula_like(""))
+        self.assertFalse(is_formula_like("-42.5"))
     def test_reports_cell_coordinates(self):
-        result=scan_rows([["name","value"],["x","=1+1"]])
-        self.assertEqual((result[0]["row"],result[0]["column"]),(2,2))
+        result = scan_rows([["name", "value"], ["x", "=1+1"]])
+        self.assertEqual((result[0]["row"], result[0]["column"]), (2, 2))
 
-if __name__=="__main__": unittest.main()
+if __name__ == "__main__":
+    unittest.main()
